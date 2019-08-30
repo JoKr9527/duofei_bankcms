@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>银行客户管理系统</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta charset=UTF-8>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+    	function check(obj,id){
+    		var reg= /^[A-Za-z0-9]+$/;
+    		var er = document.getElementById(id);
+    		var login = document.getElementById("login");
+			if (reg.test(obj.value)) //判断是否符合正则表达式
+			{
+				er.style.display = "none";
+				login.disabled = false;
+			}else{
+				er.style.display ="inline";
+				login.disabled =true;
+			}
+			
+				
+    	}
+    </script>
+
+  </head>
+  
+  <body style="background-color: #D9D9D9">
+    	<header><h1>银行客户管理系统</h1></header>
+    <div id="content" style="width:30%;align:center;margin:15% auto;">
+    	<form name="ml" method="post" action="http://localhost:8080/BankCMS/Login">
+        	<table style="text-align:left;">
+            	<tr>
+        			<td><b>管理员：</b></td>
+                    <td><input  name="manager" type="text" onblur="check(this,'error1')"><label id="error1" style="color:red;display:none">&nbsp;&nbsp;*必须为字母</label></td>
+                </tr>
+                <tr><td><br></td><td></td></tr>
+            	<tr>
+           			 <td><b>密码：</b></td>
+                     <td><input name="password" type="password" onblur="check(this,'error2')"><label id="error2" style="color:red;display:none">&nbsp;&nbsp;*必须为字母</label></td>
+                </tr>
+                 <tr><td><br></td><td></td></tr>
+                <tr>
+                	<td colspan="2" >
+                		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<input id="login" type="submit" disabled="disabled" value="登录">
+                    </td>
+               </table>
+        </form>
+    </div>
+    <footer></footer>
+  </body>
+</html>

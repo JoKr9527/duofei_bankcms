@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.joker.entity.Client" table="client">
+		<id name="clId" column="cl_id">
+			<generator class="hilo">
+				<param name="table">hibernate_hilo</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">100</param>
+			</generator>
+		</id>
+		<property name="clName" column="cl_name" length="20"></property>
+		<property name="clPswd" column="cl_pswd" length="6"></property>
+		<property name="clIdentity" column="cl_identity" length="18"></property>
+		<property name="clAll" column="cl_all" length="8"></property>
+		<property name="clStatus" column="cl_status" length="4"></property>
+		<property name="clAddress" column="cl_address" length="40"></property>
+		<property name="clDate" column="cl_date" length="8"></property>
+	</class>
+</hibernate-mapping>

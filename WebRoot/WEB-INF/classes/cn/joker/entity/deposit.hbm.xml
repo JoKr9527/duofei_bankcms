@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.joker.entity.Deposit" table="deposit">
+		<id name="deId" column="de_id">
+			<generator class="uuid"></generator>
+		</id>
+		<many-to-one name="ma" class="cn.joker.entity.Manager">
+			<column name="mg_id"></column>
+		</many-to-one>
+		<many-to-one name="cl" class="cn.joker.entity.Client">
+			<column name="cl_id"></column>
+		</many-to-one>
+		<set name="clAll" table="deposit_clAll" lazy="false">
+			<key column="de_id"></key>
+			<element type="java.lang.String" column="de_clAll"></element>
+		</set>
+		<property name="deDate" column="de_date" length="8"></property>
+		<property name="deMoney" column="de_money" length="8"></property>
+	</class>
+</hibernate-mapping>

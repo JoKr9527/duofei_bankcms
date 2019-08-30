@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>BankCMS</display-name>
+  <filter>
+  	<filter-name>characterEncodingFilter</filter-name>
+  	<filter-class>cn.joker.filter.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encode</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>characterEncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>cn.joker.servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoHeader</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoHeader</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoSystemManager</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoSystemManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoAccountManager</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoAccountManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoCustomerInfoManager</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoCustomerInfoManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoCustomerServiceManager</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoCustomerServiceManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoCustomerInfoQuery</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoCustomerInfoQuery</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoHelp</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoHelp</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangePswd</servlet-name>
+    <servlet-class>cn.joker.servlet.ChangePswd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowSqlFile</servlet-name>
+    <servlet-class>cn.joker.servlet.ShowSqlFile</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadSqlFile</servlet-name>
+    <servlet-class>cn.joker.servlet.DownloadSqlFile</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadSqlFile</servlet-name>
+    <servlet-class>cn.joker.servlet.UploadSqlFile</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Exit</servlet-name>
+    <servlet-class>cn.joker.servlet.Exit</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OpenAccount</servlet-name>
+    <servlet-class>cn.joker.servlet.OpenAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CancelAccount</servlet-name>
+    <servlet-class>cn.joker.servlet.CancelAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReportAccount</servlet-name>
+    <servlet-class>cn.joker.servlet.ReportAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CancelReportAccount</servlet-name>
+    <servlet-class>cn.joker.servlet.CancelReportAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValidateAccount</servlet-name>
+    <servlet-class>cn.joker.servlet.ValidateAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeAccountPswd</servlet-name>
+    <servlet-class>cn.joker.servlet.ChangeAccountPswd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DrawMoney</servlet-name>
+    <servlet-class>cn.joker.servlet.DrawMoney</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DepositMoney</servlet-name>
+    <servlet-class>cn.joker.servlet.DepositMoney</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TransferMoney</servlet-name>
+    <servlet-class>cn.joker.servlet.TransferMoney</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QueryAll</servlet-name>
+    <servlet-class>cn.joker.servlet.QueryAll</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoCustomerInfoQueryX</servlet-name>
+    <servlet-class>cn.joker.servlet.ui.GoCustomerInfoQueryX</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoHeader</servlet-name>
+    <url-pattern>/goHeader</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoSystemManager</servlet-name>
+    <url-pattern>/goSystemManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoAccountManager</servlet-name>
+    <url-pattern>/goAccountManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoCustomerInfoManager</servlet-name>
+    <url-pattern>/goCustomerInfoManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoCustomerServiceManager</servlet-name>
+    <url-pattern>/goCustomerServiceManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoCustomerInfoQuery</servlet-name>
+    <url-pattern>/goCustomerInfoQuery</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoHelp</servlet-name>
+    <url-pattern>/goHelp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePswd</servlet-name>
+    <url-pattern>/changePswd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowSqlFile</servlet-name>
+    <url-pattern>/showSqlFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadSqlFile</servlet-name>
+    <url-pattern>/downloadSqlFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadSqlFile</servlet-name>
+    <url-pattern>/uploadSqlFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Exit</servlet-name>
+    <url-pattern>/exit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OpenAccount</servlet-name>
+    <url-pattern>/openAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelAccount</servlet-name>
+    <url-pattern>/cancelAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReportAccount</servlet-name>
+    <url-pattern>/reportAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelReportAccount</servlet-name>
+    <url-pattern>/cancelReportAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateAccount</servlet-name>
+    <url-pattern>/validateAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeAccountPswd</servlet-name>
+    <url-pattern>/changeAccountPswd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DrawMoney</servlet-name>
+    <url-pattern>/drawMoney</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DepositMoney</servlet-name>
+    <url-pattern>/depositMoney</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransferMoney</servlet-name>
+    <url-pattern>/transferMoney</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryAll</servlet-name>
+    <url-pattern>/queryAll</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoCustomerInfoQueryX</servlet-name>
+    <url-pattern>/goCustomerInfoQueryX</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

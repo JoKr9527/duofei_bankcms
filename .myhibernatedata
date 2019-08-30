@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Wed Jun 21 10:42:09 CST 2017
+genVersionTag=false
+sessionFactoryName=cn.joker.utils.HibernateSessionFactory
+genAnnotations=false
+configFile=/BankCMS/src/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=

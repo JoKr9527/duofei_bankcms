@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.joker.entity.Draw" table="draw">
+		<id name="drId" column="dr_id">
+			<generator class="uuid"></generator>
+		</id>
+		<many-to-one name="ma" class="cn.joker.entity.Manager">
+			<column name="ma_id"></column>
+		</many-to-one>
+		<many-to-one name="cl" class="cn.joker.entity.Client">
+			<column name="cl_id"></column>
+		</many-to-one>
+		<set name="clAll" table="draw_clAll" lazy="false">
+			<key column="dr_id"></key>
+			<element type="java.lang.String" column="dr_clAll"></element>
+		</set>
+		<property name="drDate" column="dr_date" length="8"></property>
+		<property name="drMoney" column="dr_money" length="8"></property>
+	</class>
+</hibernate-mapping>

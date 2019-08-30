@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.joker.entity.Transfer" table="transfer">
+		<id name="trId" column="tr_id">
+			<generator class="uuid"></generator>
+		</id>
+		<many-to-one name="manager" class="cn.joker.entity.Manager">
+			<column name="manager_id"></column>
+		</many-to-one>
+		<many-to-one name="client" class="cn.joker.entity.Client">
+			<column name="cl_id"></column>
+		</many-to-one>
+		<set name="clAll" table="transfer_clAll" lazy="false">
+			<key column="tr_id"></key>
+			<element type="java.lang.String" column="tr_clAll"></element>
+		</set>
+		<many-to-one name="trClient" class="cn.joker.entity.Client" cascade="none">
+			<column name="trCl_id"></column>
+		</many-to-one>
+		<property name="trDate" column="tr_date" length="8"></property>
+		<property name="trMoney" column="tr_money" length="8"></property>
+	</class>
+</hibernate-mapping>
