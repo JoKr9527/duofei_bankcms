@@ -1,1 +1,0 @@
-描述：  银行客户管理系统     环境：Hibernate javase 1.7 tomcat 8.0
